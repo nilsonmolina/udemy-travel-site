@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>hello-world</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <h1>Section 2: Git Essentials</h1>
+                    <hr />
+                    <h2>2 - WHAT IS GIT?</h2>
+                    <p>
+                        As the title describes, we are starting off this training by learning 
+                        about Git. We begin by answering the following three questions:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>What is Git?</strong>
+                            <p>
+                                Git is the world's most popular <em class="yellow">version control system</em>. It helps us manage our project files by providing <em class="blue">History</em>, <em class="green">Collaboration</em>, and <em class="purple">Feature Branches</em>. History just means that <em class="blue">Git keeps track of every change we make to our projects</em>. Using Git, we can see when the changes were made and on which files, plus it will even show us which lines were added and which lines were removed. Git also helps with collaboration, because it <em class="green">allows multiple people to work on a copy of the latest version of the code at the same time</em> and it will even handle the merging of any conflicts. Lastly, feature branches allows you to <em class="purple">work on multiple tasks at the same time, but only commit the completed tasks</em> to the repository without worrying about whether both tasks were completed or not. For example, lets say you were working on redisigning a header and footer. Without Git, if you completed the header, but the footer was still incomplete, you could not upload your changes because you would also be uploading your incomplete footer code.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Why should we learn Git</strong>
+                            <p>
+                                It is essentially an <em class="yellow">industry standard</em> these days and in the developer world, it is sort of assumed that you know Git. So whether you want to seem more attractive to employers or you want to bring structure to your code, then learning Git is truly a must.
+                            </p> 
+                        </li>
+                        <li>
+                            <strong>Where do we begin?</strong>
+                            <p>Good news, we've already begun.  We know what Git is and we know why we should learn it.  The next step is to <em class="yellow">see it in action</em> and thats just what we are going to do in the following module. So lets get our feet wet!</p>
+                        </li>
+                    </ol>
+                    <hr />
+                    <div class="section-4">
+                        <h2>4 - GIT YOUR HANDS DIRTY!</h2>
+                        <p>
+                            To begin, we will need to <em class="yellow">download and install Git </em> from the homepage <a href="http://www.git-scm.com">git-scm.com</a>.  Installion is a very basic process and you can simply accept all the default values along the way. Git may already be installed on macOS machines and you can check by running the following command in terminal:
+                        </p>
+                        <pre><code class="language-git">git --version</code></pre>
+
+                        <p>
+                            Now that Git is installed, let's <em class="yellow">start by personalizing our settings.</em>  When Git tracks your projects, it also tracks who is making those changes. So we want to let Git know about your name and your email by running the following commands.
+                        </p>
+                        <pre><code class="language-git">git config --global user.name "Nilson"</code></pre> 
+                        <pre><code class="language-git">git config --global user.email "molinanilson@gmail.com"</code></pre>
+
+                        <p>
+                            Git is all set up and ready to go. Now let's get Git to actually do something! First let's <em class="yellow">create a new folder and </em> with our CLI let us <em class="yellow">navigate to it. </em> The following is what I used to navigate to my newly created 'hello-world' folder:
+                        </p>
+                        <pre><code class="language-git">cd /c/Users/W10-Dev/Desktop/files/dev/projects/hello-world</code></pre>
+
+                        <p>
+                            With our CLI currently pointing to the root of our new folder, we can now <em class="yellow"> create a repository </em> for our project.
+                        </p>
+                        <pre><code class="language-git">git init</code></pre>
+
+                        <p>
+                            We have now created our first repo! <em class="yellow">To test it out lets create a new file</em> using the command below.  This will create an empty html file that we can use to create a very simple webpage where we can simply write "hello world".
+                        </p>
+                        <pre><code class="language-git">touch "index.html"</code></pre>
+
+                        <p>
+                            With this new file created, we have now made a change to our local repo.  <em class="yellow">To see what changes have been made, </em> we can run the following command:
+                        </p>
+                        <pre><code class="language-git">git status</code></pre>
+
+                        <p>
+                            The "git status" command returns a list of all the changes performed on the repo.  Now we want to <em class="yellow">add our new file to the staging area</em> so that we can then commit this file to our repository.
+                        </p>
+                        <pre><code class="language-git">git add index.html</code></pre>
+
+                        <p>
+                            Now our file is added to the staging area, we can run the "git status" command again to confirm our staging area, and when we are ready <em class="yellow">to commit</em>, we can run the following command. 
+                        </p>
+                        <pre><code class="language-git">git commit -m 'My first commit'</code></pre>
+                        <p>
+                            Awesome! What makes this so cool is that if we ever make changes to this code, we can always revert back to it.  Whether the files are edited or even if the files are deleted, <em class="yellow">we can simply revert back to this state by using</em> the following command:
+                        </p>
+                        <pre><code class="language-git">git checkout -- .</code></pre>
+
+                        <p>
+                            Up to this point, we have been working on our local repository.  But as our final step, we will instead clone an existing repo from a remote server to our hard drive.  Let us pretend that a coworker is working on a project and they want us to help them.  So the repo already exists, so we wouldn't create a new repo.  Instead we would want to take the existing repo that exists in a server and clone it to our computer.  So back in our machine, we will <em class="yellow">navigate to our projects folder (NOT our 'hello world' repo folder) and then clone the repo to this location</em>.  Below are the commands required to do these two steps:
+                        </p>
+                        <pre><code class="language-git">cd ..</code></pre>
+                        <pre><code class="language-git">git clone https://github.com/LearnWebCode/welcome-to-git.git</code></pre>
+                        <p>And thats it! If you check the projects folder, you will see the new folder we just cloned.</p>
+                    </div>
+                    <hr />
+
+                    <h2>5 - SETUP YOUR GITHUB</h2>
+                    <p>Content pending...</p>
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+            <small><strong>Udemy Course:</strong> <em>Git a Web Developer Job</em> &nbsp;-&nbsp; <strong>Author:</strong> <em>Brad Schiffen</em> &nbsp;-&nbsp; <strong>Student:</strong> <em>Nilson Molina</em> &nbsp;-&nbsp; <strong>Design Inspiration:</strong> <em><a href="http://support.google.com/?hl=en">Google Support</a></em></small>
+        </footer>
+    </body>
+</html>
