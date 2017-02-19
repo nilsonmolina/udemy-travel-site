@@ -9,7 +9,7 @@ body {
     background-image: linear-gradient(to bottom, #4285f4 400px,#eee 400px);
 }
 h1 {
-    margin-top: 0;
+    margin-top: 50px;
 }
 ol li p {
     margin-top: 5px;
