@@ -6,120 +6,215 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="header">
-                
-            </div>
+            <div class="header"></div>
             <div class="page">
                 <div class="page-content">
-                    <h1>Section 2: Git Essentials</h1>
-                    <hr />
-                    <h2>2 - WHAT IS GIT?</h2>
-                    <p>
-                        As the title describes, we are starting off this training by learning 
-                        about Git. We begin by answering the following three questions:
-                    </p>
-                    <ol>
-                        <li>
-                            <strong>What is Git?</strong>
+                    <div class="section">
+                        <h1>Section 2: Git Essentials</h1>
+                        <div class="module">
+                            <h2>2 - WHAT IS GIT?</h2>
                             <p>
-                                Git is the world's most popular <em class="yellow">version control system</em>. It helps us manage our project files by providing <em class="blue">History</em>, <em class="green">Collaboration</em>, and <em class="purple">Feature Branches</em>. History just means that <em class="blue">Git keeps track of every change we make to our projects</em>. Using Git, we can see when the changes were made and on which files, plus it will even show us which lines were added and which lines were removed. Git also helps with collaboration, because it <em class="green">allows multiple people to work on a copy of the latest version of the code at the same time</em> and it will even handle the merging of any conflicts. Lastly, feature branches allows you to <em class="purple">work on multiple tasks at the same time, but only commit the completed tasks</em> to the repository without worrying about whether both tasks were completed or not. For example, lets say you were working on redisigning a header and footer. Without Git, if you completed the header, but the footer was still incomplete, you could not upload your changes because you would also be uploading your incomplete footer code.
+                                As the title describes, we are starting off this training by learning
+                                about Git. We begin by answering the following three questions:
                             </p>
-                        </li>
-                        <li>
-                            <strong>Why should we learn Git</strong>
+                            <ol>
+                                <li>
+                                    <strong>What is Git?</strong>
+                                    <p>
+                                        Git is the world's most popular <em class="yellow">version control system</em>. It helps us manage our project files by providing <em class="blue">History</em>, <em class="green">Collaboration</em>, and <em class="purple">Feature Branches</em>. History just means that <em class="blue">Git keeps track of every change we make to our projects</em>. Using Git, we can see when the changes were made and on which files, plus it will even show us which lines were added and which lines were removed. Git also helps with collaboration, because it <em class="green">allows multiple people to work on a copy of the latest version of the code at the same time</em> and it will even handle the merging of any conflicts. Lastly, feature branches allows you to <em class="purple">work on multiple tasks at the same time, but only commit the completed tasks</em> to the repository without worrying about whether both tasks were completed or not. For example, lets say you were working on redisigning a header and footer. Without Git, if you completed the header, but the footer was still incomplete, you could not upload your changes because you would also be uploading your incomplete footer code.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Why should we learn Git</strong>
+                                    <p>
+                                        It is essentially an <em class="yellow">industry standard</em> these days and in the developer world, it is sort of assumed that you know Git. So whether you want to seem more attractive to employers or you want to bring structure to your code, then learning Git is truly a must.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Where do we begin?</strong>
+                                    <p>Good news, we've already begun.  We know what Git is and we know why we should learn it.  The next step is to <em class="yellow">see it in action</em> and thats just what we are going to do in the following module. So lets get our feet wet!</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="module">
+                            <h2>4 - GIT YOUR HANDS DIRTY!</h2>
                             <p>
-                                It is essentially an <em class="yellow">industry standard</em> these days and in the developer world, it is sort of assumed that you know Git. So whether you want to seem more attractive to employers or you want to bring structure to your code, then learning Git is truly a must.
-                            </p> 
-                        </li>
-                        <li>
-                            <strong>Where do we begin?</strong>
-                            <p>Good news, we've already begun.  We know what Git is and we know why we should learn it.  The next step is to <em class="yellow">see it in action</em> and thats just what we are going to do in the following module. So lets get our feet wet!</p>
-                        </li>
-                    </ol>
-                    <hr />
-                    <div class="section-4">
-                        <h2>4 - GIT YOUR HANDS DIRTY!</h2>
-                        <p>
-                            To begin, we will need to <em class="yellow">download and install Git </em> from the homepage <a href="http://www.git-scm.com">git-scm.com</a>.  Installion is a very basic process and you can simply accept all the default values along the way. Git may already be installed on macOS machines and you can check by running the following command in terminal:
-                        </p>
-                        <pre><code class="language-git">git --version</code></pre>
+                                To begin, we will need to <em class="yellow">download and install Git </em> from the homepage <a href="http://www.git-scm.com">git-scm.com</a>.  Installion is a very basic process and you can simply accept all the default values along the way. Git may already be installed on macOS machines and you can check by running the following command in terminal:
+                            </p>
+                            <pre><code class="language-git">git --version</code></pre>
 
-                        <p>
-                            Now that Git is installed, let's <em class="yellow">start by personalizing our settings.</em>  When Git tracks your projects, it also tracks who is making those changes. So we want to let Git know about your name and your email by running the following commands.
-                        </p>
-                        <pre><code class="language-git">git config --global user.name "Nilson"</code></pre> 
-                        <pre><code class="language-git">git config --global user.email "molinanilson@gmail.com"</code></pre>
+                            <p>
+                                Now that Git is installed, let's <em class="yellow">start by personalizing our settings.</em>  When Git tracks your projects, it also tracks who is making those changes. So we want to let Git know about your name and your email by running the following commands.
+                            </p>
+                            <pre><code class="language-git">git config --global user.name "Nilson"</code></pre>
+                            <pre><code class="language-git">git config --global user.email "molinanilson@gmail.com"</code></pre>
 
-                        <p>
-                            Git is all set up and ready to go. Now let's get Git to actually do something! First let's <em class="yellow">create a new folder and </em> with our CLI let us <em class="yellow">navigate to it. </em> The following is what I used to navigate to my newly created 'hello-world' folder:
-                        </p>
-                        <pre><code class="language-git">cd /c/Users/W10-Dev/Desktop/files/dev/projects/hello-world</code></pre>
+                            <p>
+                                Git is all set up and ready to go. Now let's get Git to actually do something! First let's <em class="yellow">create a new folder and </em> with our CLI let us <em class="yellow">navigate to it. </em> The following is what I used to navigate to my newly created 'hello-world' folder:
+                            </p>
+                            <pre><code class="language-git">cd /c/Users/W10-Dev/Desktop/files/dev/projects/hello-world</code></pre>
 
-                        <p>
-                            With our CLI currently pointing to the root of our new folder, we can now <em class="yellow"> create a repository </em> for our project.
-                        </p>
-                        <pre><code class="language-git">git init</code></pre>
+                            <p>
+                                With our CLI currently pointing to the root of our new folder, we can now <em class="yellow"> create a repository </em> for our project.
+                            </p>
+                            <pre><code class="language-git">git init</code></pre>
 
-                        <p>
-                            We have now created our first repo! <em class="yellow">To test it out lets create a new file</em> using the command below.  This will create an empty html file that we can use to create a very simple webpage where we can simply write "hello world".
-                        </p>
-                        <pre><code class="language-git">touch "index.html"</code></pre>
+                            <p>
+                                We have now created our first repo! <em class="yellow">To test it out lets create a new file</em> using the command below.  This will create an empty html file that we can use to create a very simple webpage where we can simply write "hello world".
+                            </p>
+                            <pre><code class="language-git">touch "index.html"</code></pre>
 
-                        <p>
-                            With this new file created, we have now made a change to our local repo.  <em class="yellow">To see what changes have been made, </em> we can run the following command:
-                        </p>
-                        <pre><code class="language-git">git status</code></pre>
+                            <p>
+                                With this new file created, we have now made a change to our local repo.  <em class="yellow">To see what changes have been made, </em> we can run the following command:
+                            </p>
+                            <pre><code class="language-git">git status</code></pre>
 
-                        <p>
-                            The "git status" command returns a list of all the changes performed on the repo.  Now we want to <em class="yellow">add our new file to the staging area</em> so that we can then commit this file to our repository.
-                        </p>
-                        <pre><code class="language-git">git add index.html</code></pre>
+                            <p>
+                                The "git status" command returns a list of all the changes performed on the repo.  Now we want to <em class="yellow">add our new file to the staging area</em> so that we can then commit this file to our repository.
+                            </p>
+                            <pre><code class="language-git">git add index.html</code></pre>
 
-                        <p>
-                            Now our file is added to the staging area, we can run the "git status" command again to confirm our staging area, and when we are ready <em class="yellow">to commit</em>, we can run the following command. 
-                        </p>
-                        <pre><code class="language-git">git commit -m 'My first commit'</code></pre>
-                        <p>
-                            Awesome! What makes this so cool is that if we ever make changes to this code, we can always revert back to it.  Whether the files are edited or even if the files are deleted, <em class="yellow">we can simply revert back to this state by using</em> the following command:
-                        </p>
-                        <pre><code class="language-git">git checkout -- .</code></pre>
+                            <p>
+                                Now our file is added to the staging area, we can run the "git status" command again to confirm our staging area, and when we are ready <em class="yellow">to commit</em>, we can run the following command.
+                            </p>
+                            <pre><code class="language-git">git commit -m 'My first commit'</code></pre>
+                            <p>
+                                Awesome! What makes this so cool is that if we ever make changes to this code, we can always revert back to it.  Whether the files are edited or even if the files are deleted, <em class="yellow">we can simply revert back to this state by using</em> the following command:
+                            </p>
+                            <pre><code class="language-git">git checkout -- .</code></pre>
 
-                        <p>
-                            Up to this point, we have been working on our local repository.  But as our final step, we will instead clone an existing repo from a remote server to our hard drive.  Let us pretend that a coworker is working on a project and they want us to help them.  So the repo already exists, so we wouldn't create a new repo.  Instead we would want to take the existing repo that exists in a server and clone it to our computer.  So back in our machine, we will <em class="yellow">navigate to our projects folder (NOT our 'hello world' repo folder) and then clone the repo to this location</em>.  Below are the commands required to do these two steps:
-                        </p>
-                        <pre><code class="language-git">cd ..</code></pre>
-                        <pre><code class="language-git">git clone https://github.com/LearnWebCode/welcome-to-git.git</code></pre>
-                        <p>And thats it! If you check the projects folder, you will see the new folder we just cloned.</p>
+                            <p>
+                                Up to this point, we have been working on our local repository.  But as our final step, we will instead clone an existing repo from a remote server to our hard drive.  Let us pretend that a coworker is working on a project and they want us to help them.  So the repo already exists, so we wouldn't create a new repo.  Instead we would want to take the existing repo that exists in a server and clone it to our computer.  So back in our machine, we will <em class="yellow">navigate to our projects folder (NOT our 'hello world' repo folder) and then clone the repo to this location</em>.  Below are the commands required to do these two steps:
+                            </p>
+                            <pre><code class="language-git">cd ..</code></pre>
+                            <pre><code class="language-git">git clone https://github.com/LearnWebCode/welcome-to-git.git</code></pre>
+                            <p>And thats it! If you check the projects folder, you will see the new folder we just cloned.</p>
+                        </div>
+                        <div class="module">
+                            <h2>5 - SETUP YOUR GITHUB</h2>
+                            <p>In this lesson we have two main tasks</p>
+                            <ol>
+                              <li>Create a GitHub account</li>
+                              <li>Create the repo with our website's starter files</li>
+                            </ol>
+                            <p>
+                              GitHub allows us to store our repository to a remote server.  I am going to skip ahead a bit, but essentially we need to create a GitHub account and then create a new repository.  At this point, we now have a place to remotely store our repositories.  This protects us in the event where our local computer crashes, gets stolen, explodes... you get the point.  It also allows us to share our repo and if we choose, we can allow others to make changes and bugfixes to the code. Now that we have a new and completely empty repo, it is waiting for us to push our local repo to the remote repo in GitHubs servers.
+                            </p>
+                            <pre><code class="language-git">cd /c/Users/W-10-Dev/Desktop/files/dev/projects</code></pre>
+                            <pre><code class="language-git">git clone https://github.com/LearnWebCode/travel-site-files.git</code></pre>
+                            <pre><code class="language-git">cd udemy-travel-site/</code></pre>
+                            <pre><code class="language-git">git status</code></pre>
+                            <pre><code class="language-git">git add -A</code></pre>
+                            <pre><code class="language-git">git commit -m 'cloned course files and completed section 2'</code></pre>
+                            <pre><code class="language-git">git push origin master</code></pre>
+                            <p>
+                              Because of the way I structured my code, I did not follow all the steps in the course.  Below are some commands the author used that I did not use. The first one displays the remote repositories server address for fetch and push commands. The second one changes the server address for the repo.
+                            </p>
+                            <pre><code class="language-git">git remote -v</code></pre>
+                            <pre><code class="language-git">git remote set-url origin https://github.com/nilsonmolina/udemy-travel-site</code></pre>
+                        </div>
                     </div>
-                    <hr />
-
-                    <h2>5 - SETUP YOUR GITHUB</h2>
-                    <p>In this lesson we have two main tasks</p>
-                    <ol>
-                        <li>Create a GitHub account</li>
-                        <li>Create the repo with our website's starter files</li>
-                    </ol> 
-                    <p>
-                        GitHub allows us to store our repository to a remote server.  I am going to skip ahead a bit, but essentially we need to create a GitHub account and then create a new repository.  At this point, we now have a place to remotely store our repositories.  This protects us in the event where our local computer crashes, gets stolen, explodes... you get the point.  It also allows us to share our repo and if we choose, we can allow others to make changes and bugfixes to the code. Now that we have a new and completely empty repo, it is waiting for us to push our local repo to the remote repo in GitHubs servers. 
-                    </p>
-                    <pre><code class="language-git">cd /c/Users/W-10-Dev/Desktop/files/dev/projects</code></pre>
-                    <pre><code class="language-git">git clone https://github.com/LearnWebCode/travel-site-files.git</code></pre>
-                    <pre><code class="language-git">cd udemy-travel-site/</code></pre>
-                    <pre><code class="language-git">git status</code></pre>
-                    <pre><code class="language-git">git add -A</code></pre>
-                    <pre><code class="language-git">git commit -m 'cloned course files and completed section 2'</code></pre>
-                    <pre><code class="language-git">git push origin master</code></pre>
-                    <p>
-                        Because of the way I structured my code, I did not follow all the steps in the course.  Below are some commands the author used that I did not use. The first one displays the remote repositories server address for fetch and push commands. The second one changes the server address for the repo.
-                    </p>
-                    <pre><code class="language-git">git remote -v</code></pre>
-                    <pre><code class="language-git">git remote set-url origin https://github.com/nilsonmolina/udemy-travel-site</code></pre>
-
-                    <h1>Section 3: Intro to Node.js & NPM</h1>
-                    <hr />
-                    <p>
-                        content pending...
-                    </p>
+                    <div class="section">
+                        <h1>Section 3: Intro to Node.js &amp; NPM</h1>
+                        <div class="module">
+                            <h2>6 - THE NEED FOR AUTOMATION &amp; ORGANIZATION</h2>
+                            <p>
+                                While we build our website, we want automation and organization.  <em class="yellow">Automation will save us time and organization will save our sanity</em>.
+                            </p>
+                            <ol>
+                                <li>
+                                    <strong>Automation</strong>
+                                    <p>
+                                        Automation just means to take a task and find a way to have our computer do it for us. So if there is a small task that we find ourselves performing again and again and again, we can save a lot of time if we can make the computer perform that task for us. A good example is automatic browser refresh. Everytime we make a change to our style sheet or html file, instead of hopping into our browser and refreshing the page everytime, we can have our computer detect that changes were saved to our file and then automatically trigger a refresh in the browser for us.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Organization</strong>
+                                    <p>
+                                        Organization is crucial and will not only save us time when we need to find a certain file, but it will also help us when we come back to our code, months or even years later.  In this course we will touch upon CSS Organization and Package Management.  With CSS Organization, we can create multiple smaller and maintainable css files for us to work with. The downside to this is that browsers will now have to download all of these multiple files.  Fortunately, node allows us to combine all of those separate files into a single stylesheet for the web browser, giving us the best of both worlds.  Package Management on the other hand allows us to download all of our libraries (ie jquery, bootstrap, normalize.css, etc...) without having to use a browser and go to all of their respective websites.  Package Management has a lot of benefits that we will see first hand in the modules to come.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="module">
+                            <h2>7 - NODE.JS INTRODUCTION</h2>
+                            <p>This lesson has three main parts to it:</p>
+                            <ol>
+                                <li>Figure out what node.js is</li>
+                                <li>Install node on our computer</li>
+                                <li>Perform a hands on demo</li>
+                            </ol>
+                            <p>
+                                Traditionally, JavaScript is a language that only runs in the web browser.  Node.js changes this, and allows javascript to run on the server.  It essentially takes out the javascript guts from google Chrome and creates a new playground located on the computer for javascript to run on.
+                            </p>
+                            <p>
+                                To install node to your local machine, simply open up your web browser of choice and go to the node home page: <a href="http://nodejs.org/en/">http://nodejs.org/en/<a> and download the LTS version.  We don't want the latest and most cutting edge version, and will instead get the latest stable version. Once downloaded, simply double click it and install it with all the default values. After installation is completed, open up the CLI and then check to see your version number by using the following command:
+                            </p>
+                            <pre><code class="language-node">node -v</code></pre>
+                            <p>
+                                Now lets get a brief hands on with running javascript without a browser.  Create a new folder, I called mine sandbox, and within that folder create a new javascript file, I named mine test.js.  Open up the javascript file and type in <em>console.log(2+2);</em> save the file and then navigate to the folder using a CLI. In the CLI, run the javascript file using the following command:
+                            </p>
+                            <pre><code class="language-node">node test.js</code></pre>
+                            <p>
+                                You should get a response of "4" in the CLI.  This may not seem like a big deal, but the significance of this is that the contents of the Javascript file were not merely repeated or simply echoed out as text.  Instead, node actually interpreted and evaluated our javascript code! Node calculated "2 + 2" and responded with 4.
+                            </p>
+                            <p>
+                                Lastly, we played with a few extra node capabilities by allowing javascript to create files on the file system, and even download a picture from the internet.  The code can be found in the github repository under: <em>udemy-travel-site/sandbox/3-7-node-experiment folder.</em>
+                            </p>
+                        </div>
+                        <div class="module">
+                            <h2>8 - NPM INTRODUCTION</h2>
+                            <p>
+                                In this lesson, we are going to learn about NPM or <strong>N</strong>ode <strong>P</strong>ackage <strong>M</strong>anager. We will be covering three main things:
+                            </p>
+                            <ol>
+                                <li>
+                                    <strong><em class="blue">What is NPM?</em> <em class="green">What is package management?</em> <em class="purple">Why would we use it?</em></strong>
+                                    <p>
+                                        Think of NPM as a Grocery Store that contains code instead of food. If we were going to bake a cake, we would need flour, sugar, baking powder, etc.  How would we get those ingredients? For example, with flour, would we start with wheat and turn that into flour ourselves? Maybe some people would, but the grand majority would go to the grocery store and pick up some flour. The same is true with development of code.  When baking a... well a website, the ingredients may be jQuery, picturefill, auto compile css, etc. Instead of writing most of these things ourselves, we can go to the "grocery store", NPM, and pickup what we need. <em class="blue">So <strong>NPM</strong> is a centralized place where developers share their code with the world <strong>for free</strong>.</em> Without NPM we would need to go to multiple "grocery stores" or websites, to get all of our ingredients. This is the equivalent of going to bootstraps website for bootstrap, jquery's website for jquery, and so on and so forth.  <em class="green">With package management, we can simply make a list of packages we want, and we will get all of those automatically.</em> To continue with our metaphor, what happens when our ingredients get old or expire? We go back to the grocery store and replace our old ingredients with the fresh and new one. Same is true with package management, and it can be done with a single command! <em class="purple">So not only can we easily get all of the packages (ingredients) that we need, but we can also get any updates on those packages as needed, very easily.</em>
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>What types of files/packages we hope to find on NPM</strong>
+                                    <p>
+                                        Most packages will fall in one of two categories: <strong>Node packages</strong>,(<em>typically enable us to perform automation, build tools, server tasks</em>) &amp; <strong>Other things</strong> (<em>like jQuery, Lodash, Bootstrap, Normalize.css, etc.</em>)
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Hands-on demo</strong>
+                                    <p>
+                                        First lets add jquery to our project.  To do so, open up your CLI and navigate to the project folder.  After that, run the following command to add jquery to this project:
+                                    </p>
+                                    <pre><code class="language-node">npm install jquery</code></pre>
+                                    <p>
+                                        This creates a new directory (folder) called "npm_modules" and within that is the jquery library that we requested. So that did exactly what we wanted, but this still requires us to download packages one by one.  Instead, lets delete the node_modules folder and try a more organized approach to getting our packages. Lets create our "grocery list" or "recipe ingredients list" of all the packages we will need for our project. To do that lets run the following command:
+                                    </p>
+                                    <pre><code class="language-node">npm init</code></pre>
+                                    <p>
+                                        The CLI will ask us for more information, for now let's leave it as is and accept the defaults by hitting the "enter" key until it is done. This will create a new file called "package.init" which is our "grocery list" and we will want to create one of these for every one of our projects. We can open the file with our text editor of choice and we will see that it currently only contains information on our project. For now, we can simply delete everything except name and version. What makes the package.json file so great, is that we can use it to keep track of which packages we are using. Now if we use the command below, we will see that the package.json file has updated.
+                                    </p>
+                                    <pre><code class="language-node">npm install jquery --save</code></pre>
+                                    <pre><code class="language-node">npm install normalize.css --save</code></pre>
+                                    <p>
+                                        If you open up the package.json file now, you will see that a dependencies collection was added to the file that includes the jquery and normalize.css packages that we added.
+                                    </p>
+                                    <p>
+                                        One example of why this is very useful can be seen be deleting the node_modules folder that contains the packages that we just installed. By doing this, we lost the packages, but because we have our "recipe list" we can simply retrieve those packages by running the following command:
+                                    </p>
+                                    <pre><code class="language-node">npm install</code></pre>
+                                    <p>
+                                        When we run "npm install", node looks in the directory that our CLI is currently pointed at and it looks for the package.json file.  Then it will install all the dependencies in the package.json file in one fell swoop.
+                                    </p>
+                                    <p>
+                                        To figure out the exact name of packages, you can go to the <a href="https://npmjs.com">npm homepage</a> and use the search functionality. Or you can simply google and use "npm" at the end of your search query.
+                                    </p>
+                                    <p>
+                                        And lastly, if you run "git status" command, you will notice that the node_modules folder does not show up.  Even if you push your local repository to github, you will notice that the node_modules are NOT uploaded.  This is because in our ".gitignore" file, we are telling git to ignore the node_modules folder.  The gitignore file can help us keep our repositories clean and is especially useful for files such as .DS_Store which is found in macOS and other such things. <em class="yellow">We tell git to ignore the node_modules folder because it is a best practice.</em> As long as we have the package.json file, we can simply run "npm install" to get all those files again.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
